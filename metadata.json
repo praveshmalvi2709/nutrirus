@@ -1,0 +1,6 @@
+{
+  "name": "NutriRus — Cold-Pressed Juices & Healthy Food | Indore",
+  "description": "NutriRus is a fresh juice and beverage bar located in Indore offering 100% natural cold-pressed juices, 22g protein meal boxes, wholesome bowls, and detox cleanses at Zodiac Mall, Scheme 140.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
