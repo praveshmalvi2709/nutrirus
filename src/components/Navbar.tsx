@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Logo } from './Logo';
-import { ShoppingBag, MessageCircle, Menu, X, Phone } from 'lucide-react';
-import { STORE_INFO } from '../data/products';
+import React, { useState } from "react";
+import { Logo } from "./Logo";
+import { ShoppingBag, MessageCircle, Menu, X, Phone } from "lucide-react";
+import { STORE_INFO } from "../data/products";
 
 interface NavbarProps {
   cartCount: number;
@@ -9,14 +9,21 @@ interface NavbarProps {
   onOpenWhatsApp: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart, onOpenWhatsApp }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  cartCount,
+  onOpenCart,
+  onOpenWhatsApp,
+}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-[#FBF9F4]/95 backdrop-blur-md border-b border-stone-200/80 transition-all duration-200">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-6 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2 sm:gap-6 lg:gap-8">
         {/* Zone 1: Brand Wordmark */}
-        <a href="#" className="flex items-center gap-2 sm:gap-3 shrink-0 focus-visible:outline-2 focus-visible:outline-[#15803D] rounded-lg">
+        <a
+          href="#"
+          className="flex items-center gap-2 sm:gap-3 shrink-0 focus-visible:outline-2 focus-visible:outline-[#15803D] rounded-lg"
+        >
           <Logo size={36} showText={true} />
         </a>
 
@@ -85,7 +92,11 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart, onOpenWha
             className="md:hidden p-2 text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded-lg focus-visible:outline-2 focus-visible:outline-[#15803D]"
             aria-label="Toggle mobile menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
