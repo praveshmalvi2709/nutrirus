@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { MessageCircle, ArrowRight, Star } from 'lucide-react';
-import { Product } from '../types';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { MessageCircle, ArrowRight, Star } from "lucide-react";
+import { Product } from "../types";
 
 interface HeroProps {
   onSelectProduct: (product: Product) => void;
@@ -11,24 +11,25 @@ interface HeroProps {
 
 const HERO_SLIDES = [
   {
-    src: '/assets/aistudio/841229967_18095820698227329_4814920154968075770_n_88fe6399.jpg',
-    title: 'Signature Cold-Pressed Lineup',
-    subtitle: 'Green Island • Orange Shine • Refresh+ • Blue Spirulina',
+    src: "/assets/841229967_18095820698227329_4814920154968075770_n_88fe6399.jpg",
+    title: "Signature Cold-Pressed Lineup",
+    subtitle: "Green Island • Orange Shine • Refresh+ • Blue Spirulina",
   },
   {
-    src: '/assets/aistudio/785200593_18090930098227329_1875046738226341858_n_abb4a313.jpg',
-    title: 'Refresh+ (300ml)',
-    subtitle: 'Cucumber, Apple, Lemon, Ginger & Mint',
+    src: "/assets/785200593_18090930098227329_1875046738226341858_n_abb4a313.jpg",
+    title: "Refresh+ (300ml)",
+    subtitle: "Cucumber, Apple, Lemon, Ginger & Mint",
   },
   {
-    src: '/assets/aistudio/787036400_18090585578227329_9097589217674644502_n_9ac3b303.jpg',
-    title: 'Orange Shine (300ml)',
-    subtitle: 'Orange, Carrot & Fresh Mint • Supports Immune System',
+    src: "/assets/787036400_18090585578227329_9097589217674644502_n_9ac3b303.jpg",
+    title: "Orange Shine (300ml)",
+    subtitle: "Orange, Carrot & Fresh Mint • Supports Immune System",
   },
   {
-    src: '/assets/aistudio/830872566_18094701890227329_6789745595925061865_n_0a2d4578.jpg',
-    title: 'Green Island (300ml)',
-    subtitle: 'Kale, Lettuce, Spinach, Celery, Cucumber, Coriander, Ginger & Lemon',
+    src: "/assets/830872566_18094701890227329_6789745595925061865_n_0a2d4578.jpg",
+    title: "Green Island (300ml)",
+    subtitle:
+      "Kale, Lettuce, Spinach, Celery, Cucumber, Coriander, Ginger & Lemon",
   },
 ];
 
@@ -49,14 +50,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWhatsApp }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
           {/* Left Hero Column: Brand Story & Call to Action */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Status / Location editorial tag */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white border border-stone-200/90 rounded-full shadow-2xs">
               <span className="flex h-2 w-2 rounded-full bg-[#15803D]" />
               <span className="text-xs font-semibold text-stone-700 tracking-wide">
-                Freshly Pressed in Indore • Scheme 140
+                Freshly Pressed Juices in Indore • Scheme 140
               </span>
               <span className="text-stone-300">|</span>
               <span className="text-xs font-bold text-[#E08714] flex items-center gap-1">
@@ -67,12 +67,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWhatsApp }) => {
 
             {/* Display Headline */}
             <div className="space-y-3">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0F4C3A] leading-[1.12] sm:leading-[1.08] font-display" style={{ textWrap: 'balance' }}>
-                Eat better. Drink better.{' '}
-                <span className="text-[#D97706] inline-block">Live better.</span>
+              <h1
+                className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0F4C3A] leading-[1.12] sm:leading-[1.08] font-display"
+                style={{ textWrap: "balance" }}
+              >
+                Eat better. Drink better.{" "}
+                <span className="text-[#D97706] inline-block">
+                  Live better.
+                </span>
               </h1>
               <p className="text-base sm:text-xl text-stone-600 max-w-xl font-normal leading-relaxed">
-                Indore’s premier fresh juice & beverage bar. Pure hydraulic cold-pressed juices, energizing power bowls, and high-protein clean meals crafted without added sugars or artificial shortcuts.
+                Indore’s premier fresh juice & beverage bar. Pure hydraulic
+                cold-pressed juices, energizing power bowls, and high-protein
+                clean meals crafted without added sugars or artificial
+                shortcuts.
               </p>
             </div>
 
@@ -87,7 +95,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWhatsApp }) => {
               </a>
 
               <button
-                onClick={() => onOpenWhatsApp('Hi NutriRus! I would like to order fresh juices and meals for delivery in Indore.')}
+                onClick={() =>
+                  onOpenWhatsApp(
+                    "Hi NutriRus! I would like to order fresh juices and meals for delivery in Indore.",
+                  )
+                }
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-[#0F4C3A] bg-white hover:bg-emerald-50/80 border border-stone-300 hover:border-[#15803D] active:scale-[0.98] rounded-xl shadow-xs transition-all focus-visible:outline-2 focus-visible:outline-[#15803D] text-center"
               >
                 <MessageCircle className="w-4 h-4 text-[#15803D]" />
@@ -98,16 +110,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWhatsApp }) => {
             {/* Nutrition & Trust Indicators */}
             <div className="pt-5 border-t border-stone-200/80 grid grid-cols-3 gap-2 sm:gap-4 text-left">
               <div className="bg-white/70 sm:bg-transparent p-2.5 sm:p-0 rounded-xl border sm:border-0 border-stone-200/60">
-                <p className="text-lg sm:text-2xl font-extrabold text-[#0F4C3A] font-display tabular-nums">100%</p>
-                <p className="text-[11px] sm:text-xs text-stone-600 mt-0.5 leading-tight">Raw Cold-Pressed</p>
+                <p className="text-lg sm:text-2xl font-extrabold text-[#0F4C3A] font-display tabular-nums">
+                  100%
+                </p>
+                <p className="text-[11px] sm:text-xs text-stone-600 mt-0.5 leading-tight">
+                  Raw Cold-Pressed
+                </p>
               </div>
               <div className="bg-white/70 sm:bg-transparent p-2.5 sm:p-0 rounded-xl border sm:border-0 border-stone-200/60">
-                <p className="text-lg sm:text-2xl font-extrabold text-[#D97706] font-display tabular-nums">22g</p>
-                <p className="text-[11px] sm:text-xs text-stone-600 mt-0.5 leading-tight">Protein Bowls</p>
+                <p className="text-lg sm:text-2xl font-extrabold text-[#D97706] font-display tabular-nums">
+                  22g
+                </p>
+                <p className="text-[11px] sm:text-xs text-stone-600 mt-0.5 leading-tight">
+                  Protein Bowls
+                </p>
               </div>
               <div className="bg-white/70 sm:bg-transparent p-2.5 sm:p-0 rounded-xl border sm:border-0 border-stone-200/60">
-                <p className="text-lg sm:text-2xl font-extrabold text-[#0F4C3A] font-display tabular-nums">8am–11pm</p>
-                <p className="text-[11px] sm:text-xs text-stone-600 mt-0.5 leading-tight">Open 7 Days</p>
+                <p className="text-lg sm:text-2xl font-extrabold text-[#0F4C3A] font-display tabular-nums">
+                  8am–11pm
+                </p>
+                <p className="text-[11px] sm:text-xs text-stone-600 mt-0.5 leading-tight">
+                  Open 7 Days
+                </p>
               </div>
             </div>
           </div>
@@ -157,8 +181,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWhatsApp }) => {
                       aria-label={`Show slide ${idx + 1}`}
                       className={`h-1.5 rounded-full transition-all duration-300 ${
                         currentIndex === idx
-                          ? 'w-7 bg-[#FBBF24]'
-                          : 'w-2 bg-white/40 hover:bg-white/70'
+                          ? "w-7 bg-[#FBBF24]"
+                          : "w-2 bg-white/40 hover:bg-white/70"
                       }`}
                     />
                   ))}
@@ -166,7 +190,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWhatsApp }) => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

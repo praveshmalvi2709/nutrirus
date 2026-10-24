@@ -266,7 +266,7 @@ export const ParallaxFruits: React.FC = () => {
       {/* 1. Top Right Juicy Orange - gentle separate float container */}
       <motion.div
         style={{ y: yOrange, rotate: rotateOrange }}
-        className="absolute top-28 right-3 sm:right-12 md:right-20 opacity-60 sm:opacity-80"
+        className="absolute top-28 right-3 sm:right-12 md:right-30 opacity-60 sm:opacity-80"
       >
         <div className="animate-[bounce_7s_ease-in-out_infinite] filter drop-shadow-sm">
           <OrangeSliceSVG size={70} className="sm:w-[85px] sm:h-[85px]" />

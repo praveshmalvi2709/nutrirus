@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { STORE_INFO } from '../data/products';
-import { MessageCircle, X, Send, Sparkles, CheckCheck } from 'lucide-react';
-import { NutriRusEmblem } from './Logo';
+import React, { useState, useEffect } from "react";
+import { STORE_INFO } from "../data/products";
+import { MessageCircle, X, Send, Sparkles, CheckCheck } from "lucide-react";
+import { NutriRusEmblem } from "./Logo";
 
 interface WhatsAppChatProps {
   isOpen: boolean;
@@ -14,10 +14,11 @@ export const WhatsAppChat: React.FC<WhatsAppChatProps> = ({
   isOpen,
   onClose,
   onOpen,
-  initialMessage = '',
+  initialMessage = "",
 }) => {
   const [message, setMessage] = useState(
-    initialMessage || 'Hi NutriRus! I would like to inquire about your fresh juices and meals for delivery in Indore.'
+    initialMessage ||
+      "Hi NutriRus! I would like to inquire about your fresh juices and meals for delivery in Indore.",
   );
 
   useEffect(() => {
@@ -27,11 +28,11 @@ export const WhatsAppChat: React.FC<WhatsAppChatProps> = ({
   }, [initialMessage]);
 
   const quickQuestions = [
-    '🥤 I would like to order fresh juices for delivery today.',
-    '💪 How can I get the 22g Protein Box for lunch in Indore?',
-    '🌿 Can you explain how the 3-Day Detox Cleanse works?',
-    '📍 Do you deliver to Vijay Nagar / Palasia / Scheme 54?',
-    '🥗 Are all your meals 100% vegetarian?',
+    "🥤 I would like to order fresh juices for delivery today.",
+    "💪 How can I get the 22g Protein Box for lunch in Indore?",
+    "🌿 Can you explain how the 3-Day Detox Cleanse works?",
+    "📍 Do you deliver to Vijay Nagar / Palasia / Scheme 54?",
+    "🥗 Are all your meals 100% vegetarian?",
   ];
 
   const handleSend = () => {
@@ -39,7 +40,7 @@ export const WhatsAppChat: React.FC<WhatsAppChatProps> = ({
     if (!textToSend) return;
     const encoded = encodeURIComponent(textToSend);
     const url = `https://wa.me/${STORE_INFO.whatsappNumber}?text=${encoded}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(url, "_blank", "noopener,noreferrer");
     onClose();
   };
 
@@ -50,7 +51,7 @@ export const WhatsAppChat: React.FC<WhatsAppChatProps> = ({
         {!isOpen && (
           <button
             onClick={onOpen}
-            className="group relative flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#25D366]"
+            className="group relative flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#25D366]"
             aria-label="Chat with NutriRus on WhatsApp"
           >
             {/* Ripple Pulse */}
@@ -60,10 +61,6 @@ export const WhatsAppChat: React.FC<WhatsAppChatProps> = ({
             </span>
 
             <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-white text-[#25D366]" />
-            <div className="hidden sm:flex flex-col text-left">
-              <span className="text-xs font-bold leading-tight">Chat on WhatsApp</span>
-              <span className="text-[10px] text-emerald-100 font-medium">Online • Indore G-19</span>
-            </div>
           </button>
         )}
 
@@ -100,9 +97,12 @@ export const WhatsAppChat: React.FC<WhatsAppChatProps> = ({
             <div className="p-4 bg-[#EFEAE2] min-h-[220px] max-h-[300px] overflow-y-auto space-y-3">
               {/* Automated Greeting Bubble */}
               <div className="bg-white p-3 rounded-2xl rounded-tl-xs shadow-xs text-xs text-stone-800 max-w-[85%] space-y-1">
-                <p className="font-bold text-[#0F4C3A]">NutriRus Fresh Bar 🌿</p>
+                <p className="font-bold text-[#0F4C3A]">
+                  NutriRus Fresh Bar 🌿
+                </p>
                 <p>
-                  Namaste! Welcome to NutriRus Indore. How can we help you eat and drink better today?
+                  Namaste! Welcome to NutriRus Indore. How can we help you eat
+                  and drink better today?
                 </p>
                 <div className="flex items-center justify-end gap-1 text-[10px] text-stone-400">
                   <span>8:00 AM</span>

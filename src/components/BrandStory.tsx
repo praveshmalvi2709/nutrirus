@@ -1,6 +1,14 @@
-import React, { useState } from 'react';
-import { Sparkles, HeartPulse, Droplets, Utensils, Clock, X, ZoomIn } from 'lucide-react';
-import { NutriRusEmblem } from './Logo';
+import React, { useState } from "react";
+import {
+  Sparkles,
+  HeartPulse,
+  Droplets,
+  Utensils,
+  Clock,
+  X,
+  ZoomIn,
+} from "lucide-react";
+import { NutriRusEmblem } from "./Logo";
 
 interface BrandPoster {
   src: string;
@@ -15,68 +23,69 @@ export const BrandStory: React.FC = () => {
   const pillars = [
     {
       icon: <Utensils className="w-5 h-5 text-[#15803D]" />,
-      title: 'Eat Clean, Feel Good',
-      desc: 'No seed oils, refined sugars, or preservatives. Wholesome macro-balanced ingredients cooked fresh.',
+      title: "Eat Clean, Feel Good",
+      desc: "No seed oils, refined sugars, or preservatives. Wholesome macro-balanced ingredients cooked fresh.",
     },
     {
       icon: <HeartPulse className="w-5 h-5 text-[#15803D]" />,
-      title: 'Nourish Your Body',
-      desc: 'Hydraulic cold-pressed extraction preserves vital living enzymes, polyphenols, and essential micronutrients.',
+      title: "Nourish Your Body",
+      desc: "Hydraulic cold-pressed extraction preserves vital living enzymes, polyphenols, and essential micronutrients.",
     },
     {
       icon: <Droplets className="w-5 h-5 text-[#15803D]" />,
-      title: 'Stay Hydrated, Stay Energized',
-      desc: 'Electrolyte-rich coconut water, cucumber, and botanical elixirs that replenish at a cellular level.',
+      title: "Stay Hydrated, Stay Energized",
+      desc: "Electrolyte-rich coconut water, cucumber, and botanical elixirs that replenish at a cellular level.",
     },
     {
       icon: <Sparkles className="w-5 h-5 text-[#15803D]" />,
-      title: 'Small Choices, Big Impact',
-      desc: 'Swapping one heavy meal or soda with a NutriRus juice can transform your day and mood.',
+      title: "Small Choices, Big Impact",
+      desc: "Swapping one heavy meal or soda with a NutriRus juice can transform your day and mood.",
     },
     {
       icon: <Clock className="w-5 h-5 text-[#15803D]" />,
-      title: 'Consistency is Wellness',
-      desc: 'Convenient daily delivery across Indore so you can maintain healthy habits without friction.',
+      title: "Consistency is Wellness",
+      desc: "Convenient daily delivery across Indore so you can maintain healthy habits without friction.",
     },
   ];
 
   const brandPosters: BrandPoster[] = [
     {
-      src: '/assets/aistudio/786213692_18090585566227329_8627960629966783506_n_5504df62.jpg',
-      title: 'Welcome to Better Living',
-      subtitle: 'Nourish your body • Consistency is wellness',
-      tag: 'Brand Philosophy',
+      src: "/assets/786213692_18090585566227329_8627960629966783506_n_5504df62.jpg",
+      title: "Welcome to Better Living",
+      subtitle: "Nourish your body • Consistency is wellness",
+      tag: "Brand Philosophy",
     },
     {
-      src: '/assets/aistudio/841064445_18095254172227329_4257205599783248975_n_8411452e.jpg',
-      title: 'Wholesome Protein Meal Box',
-      subtitle: 'Grilled Paneer, Quinoa Brown Rice, Classic Hummus & Roasted Veggies',
-      tag: 'Inside the Box',
+      src: "/assets/841064445_18095254172227329_4257205599783248975_n_8411452e.jpg",
+      title: "Wholesome Protein Meal Box",
+      subtitle:
+        "Grilled Paneer, Quinoa Brown Rice, Classic Hummus & Roasted Veggies",
+      tag: "Inside the Box",
     },
     {
-      src: '/assets/aistudio/789136480_18090930089227329_8858019907936956576_n_e0c2172a.jpg',
-      title: 'Welcome to Better Eating',
-      subtitle: 'Artisan Grilled Paneer Wrap in custom NutriRus wrap',
-      tag: 'Fresh Wraps',
+      src: "/assets/789136480_18090930089227329_8858019907936956576_n_e0c2172a.jpg",
+      title: "Welcome to Better Eating",
+      subtitle: "Artisan Grilled Paneer Wrap in custom NutriRus wrap",
+      tag: "Fresh Wraps",
     },
     {
-      src: '/assets/aistudio/833217959_18094701869227329_1905789431882831131_n_9a792fd6.jpg',
-      title: 'Upgrade Your Detox Game',
-      subtitle: 'Green Island, Nine Essentials, Refresh+ & Green Elixir (300ml)',
-      tag: 'Cold-Pressed Lineup',
+      src: "/assets/833217959_18094701869227329_1905789431882831131_n_9a792fd6.jpg",
+      title: "Upgrade Your Detox Game",
+      subtitle:
+        "Green Island, Nine Essentials, Refresh+ & Green Elixir (300ml)",
+      tag: "Cold-Pressed Lineup",
     },
     {
-      src: '/assets/aistudio/785350515_18090452276227329_5583839299005509793_n_9bf33eab.jpg',
-      title: 'We Are Now Open in Indore',
-      subtitle: 'Signature NutriRus Buddha Bowl • Zodiac Mall, Scheme 140',
-      tag: 'Signature Bowl',
+      src: "/assets/785350515_18090452276227329_5583839299005509793_n_9bf33eab.jpg",
+      title: "We Are Now Open in Indore",
+      subtitle: "Signature NutriRus Buddha Bowl • Zodiac Mall, Scheme 140",
+      tag: "Signature Bowl",
     },
   ];
 
   return (
     <section className="py-16 lg:py-24 bg-white border-y border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
           <div className="flex items-center justify-center gap-2 mb-2">
@@ -85,11 +94,15 @@ export const BrandStory: React.FC = () => {
               Our Food & Beverage Constitution
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F4C3A] font-display" style={{ textWrap: 'balance' }}>
+          <h2
+            className="text-3xl sm:text-4xl font-extrabold text-[#0F4C3A] font-display"
+            style={{ textWrap: "balance" }}
+          >
             Welcome to Better Living.
           </h2>
           <p className="text-base sm:text-lg text-stone-600">
-            Founded with one clear mission in Indore: to make healthy, wholesome nutrition delicious, accessible, and uncompromised.
+            Founded with one clear mission in Indore: to make healthy, wholesome
+            nutrition delicious, accessible, and uncompromised.
           </p>
         </div>
 
@@ -127,7 +140,8 @@ export const BrandStory: React.FC = () => {
               </h3>
             </div>
             <p className="text-xs sm:text-sm text-stone-500 max-w-md">
-              Tap any card to view full details of our signature bowls, wraps, meal boxes, and cold-pressed detox bottles.
+              Tap any card to view full details of our signature bowls, wraps,
+              meal boxes, and cold-pressed detox bottles.
             </p>
           </div>
 
@@ -176,26 +190,41 @@ export const BrandStory: React.FC = () => {
         {/* 3 Highlights Triad: Drinking, Eating, Living */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-12 pt-10 sm:pt-12 border-t border-stone-100">
           <div className="p-5 sm:p-7 rounded-2xl bg-[#0F4C3A] text-white space-y-3">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#FBBF24]">01. Beverage Bar</span>
-            <h3 className="text-xl sm:text-2xl font-bold font-display">Better Drinking.</h3>
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#FBBF24]">
+              01. Beverage Bar
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold font-display">
+              Better Drinking.
+            </h3>
             <p className="text-xs text-emerald-100/90 leading-relaxed">
-              300ml cold-pressed bottles. Never heated, never pasteurized. Greens, citrus, and blue spirulina crafted daily in Indore.
+              300ml cold-pressed bottles. Never heated, never pasteurized.
+              Greens, citrus, and blue spirulina crafted daily in Indore.
             </p>
           </div>
 
           <div className="p-5 sm:p-7 rounded-2xl bg-[#F59E0B] text-amber-950 space-y-3">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#78350F]">02. Kitchen Eats</span>
-            <h3 className="text-xl sm:text-2xl font-bold font-display">Better Eating.</h3>
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#78350F]">
+              02. Kitchen Eats
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold font-display">
+              Better Eating.
+            </h3>
             <p className="text-xs text-amber-900/90 leading-relaxed">
-              22g protein power meal boxes, whole-grain seed bowls, and artisan paneer wraps that fuel recovery without feeling heavy.
+              22g protein power meal boxes, whole-grain seed bowls, and artisan
+              paneer wraps that fuel recovery without feeling heavy.
             </p>
           </div>
 
           <div className="p-5 sm:p-7 rounded-2xl bg-[#14532D] text-white space-y-3">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#86EFAC]">03. Community Vibe</span>
-            <h3 className="text-xl sm:text-2xl font-bold font-display">Better Living.</h3>
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#86EFAC]">
+              03. Community Vibe
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold font-display">
+              Better Living.
+            </h3>
             <p className="text-xs text-emerald-100/90 leading-relaxed">
-              Dine-in at our sun-drenched Zodiac Mall cafe under the "DRINK TO THRIVE" marquee, or get fresh delivery right to your door.
+              Dine-in at our sun-drenched Zodiac Mall cafe under the "DRINK TO
+              THRIVE" marquee, or get fresh delivery right to your door.
             </p>
           </div>
         </div>
@@ -233,13 +262,14 @@ export const BrandStory: React.FC = () => {
                   <h4 className="text-base font-bold text-stone-900 font-display">
                     {selectedImage.title}
                   </h4>
-                  <p className="text-xs text-stone-600 mt-0.5">{selectedImage.subtitle}</p>
+                  <p className="text-xs text-stone-600 mt-0.5">
+                    {selectedImage.subtitle}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         )}
-
       </div>
     </section>
   );
